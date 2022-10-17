@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap");
+/*Base Style*/
+:root {
+  --primary-color: #49BCE2;
+  --secondary-color: #FFD66A;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*Make it 10px*/ }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  line-height: 1.6; }
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+  /* 1.6*10=16px */
+  font-size: 1.6rem;
+  color: whitesmoke; }
+
+h1, h2, p {
+  margin: 1.6rem 0; }
+
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem; }
+
+h2 {
+  font-weight: 700;
+  font-size: 2.4rem; }
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem; }
+
+p {
+  font-weight: 400;
+  font-size: 1.8rem; }
+
+/*Make image auto, this will make it fit in its container*/
+img {
+  width: 100%;
+  height: auto; }
+
+.container {
+  margin: 0 20px; }
+
+/*Base Style*/
+.header .navbar {
+  display: flex;
+  height: 10vh; }
+  .header .navbar .menu-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-right: 2rem; }
+  .header .navbar .menu-item span {
+    font-weight: 400;
+    font-size: 1.2rem; }
+  .header .navbar .menu-item.support span {
+    font-size: 1.8rem; }
+  .header .navbar .menu-item.support span i {
+    margin-right: 1rem; }
+  .header .navbar .menu-item.support {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .header .navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1.5rem; }
+  .header .navbar .logo img {
+    height: 40px;
+    margin-left: 1rem; }
+  .header .navbar .logo i {
+    font-size: 2.8rem; }
+
+.header .header-section {
+  background: #333 url("../images/background.png") no-repeat center center/cover;
+  margin: 0 -20px;
+  height: 60vh;
+  color: #fff; }
+  .header .header-section .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    height: 60vh;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .header .header-section .header-content .search-btn {
+      display: flex;
+      width: 40%;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: #49BCE2; }
+      .header .header-section .header-content .search-btn i {
+        margin-top: 15px;
+        font-size: 3.5rem; }
+      .header .header-section .header-content .search-btn .input-search {
+        font-size: 3.5rem;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        background-color: #49BCE2; }
+
+.header .header-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header .header-features .feature-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; }
+    .header .header-features .feature-item i {
+      margin-top: 5px;
+      font-size: 2.5rem;
+      color: #49BCE2; }
+
+.popular-speciality {
+  margin-bottom: 25px; }
+  .popular-speciality .speciality-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; }
+    .popular-speciality .speciality-list .speciality {
+      margin-right: 5px; }
+      .popular-speciality .speciality-list .speciality img {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
+      .popular-speciality .speciality-list .speciality img:hover {
+        opacity: 0.5; }
+      .popular-speciality .speciality-list .speciality .speciality-txt {
+        display: block;
+        background-color: #f5efef;
+        font-size: 2.5rem; }
+
+.hospital-and-clinic {
+  margin-bottom: 25px; }
+  .hospital-and-clinic .hospital-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; }
+    .hospital-and-clinic .hospital-list .hospital {
+      margin-right: 5px; }
+      .hospital-and-clinic .hospital-list .hospital img {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
+      .hospital-and-clinic .hospital-list .hospital img:hover {
+        opacity: 0.5; }
+      .hospital-and-clinic .hospital-list .hospital .hospital-txt {
+        display: block;
+        background-color: #f5efef;
+        font-size: 2.5rem; }
+
+.doctors {
+  margin-bottom: 25px; }
+  .doctors .doctor-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; }
+    .doctors .doctor-list .doctor {
+      margin-right: 5px; }
+      .doctors .doctor-list .doctor img {
+        opacity: 1;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out; }
+      .doctors .doctor-list .doctor img:hover {
+        opacity: 0.5; }
+      .doctors .doctor-list .doctor .doctor-txt {
+        display: block;
+        background-color: #f5efef;
+        font-size: 2.5rem; }
+
+.handbooks {
+  margin-bottom: 25px; }
+  .handbooks .handbook-list {
+    display: flex; }
+    .handbooks .handbook-list .handbook {
+      display: flex; }
+      .handbooks .handbook-list .handbook img {
+        object-fit: cover;
+        height: 150px;
+        margin-right: 15px; }
+      .handbooks .handbook-list .handbook p {
+        font-size: 1.4rem; }
+
+.contact {
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #f5efef; }
+  .contact .contact-forms {
+    display: flex; }
+    .contact .contact-forms .form img {
+      margin-left: 30px;
+      height: 400px; }
+
+.footer {
+  padding: 20px;
+  font-size: 1.8rem;
+  text-align: center; }

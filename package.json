@@ -4,6 +4,7 @@
   "description": "doctor appointment booking system nodejs mysql",
   "main": "server.js",
   "scripts": {
+    "sass": "node-sass -w src/public/scss/ -o src/public/css/ --recursive",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node src/server.js"
   },
@@ -26,6 +27,7 @@
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "node-sass": "^7.0.3",
     "nodemon": "^2.0.20"
   }
 }
