@@ -221,3 +221,45 @@ img {
   padding: 20px;
   font-size: 1.8rem;
   text-align: center; }
+
+.card {
+  background-color: #f5efef;
+  border-radius: 5px;
+  padding: 20px; }
+  .card .card-header {
+    border-bottom: 1px solid grey;
+    margin-bottom: 15px; }
+
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 25px; }
+  .form-container .form-group {
+    margin-bottom: 20px; }
+    .form-container .form-group label {
+      display: inline-block;
+      width: 140px;
+      text-align: right;
+      font-weight: 700; }
+    .form-container .form-group input, .form-container .form-group select {
+      display: inline-block;
+      padding: 10px;
+      width: 100%;
+      font-size: 1.6rem;
+      outline: #49BCE2; }
+    .form-container .form-group input:focus,
+    .form-container .form-group select:focus {
+      border: 1px solid #49BCE2; }
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: #49BCE2;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px; }
+
+.btn-lg {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 700; }
