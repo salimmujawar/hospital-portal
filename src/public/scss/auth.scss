@@ -36,3 +36,16 @@
 .required {
   color: red;
 }
+
+.flash-message {
+  margin-top: 15px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  border-radius: 3px;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 10px;
+}

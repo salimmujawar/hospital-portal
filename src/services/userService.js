@@ -8,7 +8,7 @@ let createNewUser = (user) => {
       //check users's email is exist before?
       let isEmailExist = await checkEmailUser(user); 
       if (isEmailExist) {
-        resolve(`This email ${user.email} already exist. Please choose another email.`);
+        reject(`This email ${user.email} already exist. Please choose another email.`);
       }else {
         //hash the user's password
         let salt = bcrypt.genSaltSync(10);
@@ -35,7 +35,7 @@ let checkEmailUser = (userCheck) => {
         }
       });
       if(currentUser) resolve(true);
-      else resolve(false);
+      else reject(false);
     } catch (e) {
       reject(e);
     }
