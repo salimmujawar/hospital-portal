@@ -1,0 +1,30 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 30px; }
+
+.form-container .card-header {
+  border-bottom: 1px solid grey; }
+
+.form-container .card-body {
+  margin-top: 20px; }
+
+.form-container .form-group {
+  margin-bottom: 10px; }
+  .form-container .form-group label {
+    display: inline-block;
+    width: 150px;
+    align-items: right; }
+
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  margin-left: 160px;
+  background-color: #49BCE2;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px; }
+
+.required {
+  color: red; }

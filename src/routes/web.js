@@ -9,7 +9,10 @@ import homepageController from "../controllers/homepageController";
 
   let initAllWebRoutes = (app) => {
     router.get("/", homepageController.getHomepage);
-    router.get("/new-user", homepageController.getNewUserPage);
+    router.get("/login", homepageController.getLoginPage);
+    router.get("/register", homepageController.getRegisterPage);
+    router.post("/register", homepageController.handleRegister);
+    router.get("/new-user", homepageController.getNewUserPage);    
     router.post("/create-new-user", homepageController.createNewUser);
     return app.use("/", router);
   };
