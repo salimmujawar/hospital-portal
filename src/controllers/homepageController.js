@@ -10,6 +10,18 @@ let getNewUserPage = (req, res) => {
   return res.render("createUser.ejs");
 };
 
+let createNewUser = async(req, res) => {
+  let user = req.body
+  await userService.createNewUser(user);
+  return res.redirect("/");
+};
+
+let getLoginPage = (req, res) => {   
+  return res.render("auth/login.ejs", {
+    errors: req.flash("errors")    
+  });
+};
+
 let getRegisterPage = (req, res) => {
   //Keep the old input value
   let form = {
@@ -70,16 +82,6 @@ let handleRegister = async(req, res) => {
   
 };
 
-let getLoginPage = (req, res) => {
-  return res.render("auth/login.ejs");
-};
-
-let createNewUser = async(req, res) => {
-  let user = req.body
-  await userService.createNewUser(user);
-  return res.redirect("/");
-};
-
 
 
 module.exports = {
@@ -88,5 +90,5 @@ module.exports = {
   createNewUser: createNewUser,
   getRegisterPage: getRegisterPage,
   getLoginPage: getLoginPage,
-  handleRegister: handleRegister
+  handleRegister: handleRegister  
 };

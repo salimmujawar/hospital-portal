@@ -5,11 +5,11 @@ import bcrypt from "bcryptjs/dist/bcrypt";
 let createNewUser = (user) => {
   return new Promise(async (resolve, reject) => {
     try {
-      //check users's email is exist before?
-      let isEmailExist = await checkEmailUser(user); 
+      //check users's email is exist before?      
+      let isEmailExist = await checkEmailUser(user);       
       if (isEmailExist) {
         reject(`This email ${user.email} already exist. Please choose another email.`);
-      }else {
+      }else {        
         //hash the user's password
         let salt = bcrypt.genSaltSync(10);
         let hashPassword = await bcrypt.hashSync(user.password, salt);
@@ -20,7 +20,7 @@ let createNewUser = (user) => {
         resolve("Done!");
       }
       
-    }catch (e) {
+    }catch (e) {      
       reject(e);
     }
   });
@@ -33,10 +33,14 @@ let checkEmailUser = (userCheck) => {
         where: {
           email: userCheck.email
         }
-      });
-      if(currentUser) resolve(true);
-      else reject(false);
-    } catch (e) {
+      });      
+      if(currentUser) {
+        resolve(true);
+      }
+      else {
+        resolve(false);
+      }
+    } catch (e) {      
       reject(e);
     }
   });

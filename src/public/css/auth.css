@@ -16,6 +16,9 @@
     width: 150px;
     align-items: right; }
 
+.forgot-password {
+  text-decoration: none; }
+
 .btn {
   display: inline-block;
   border: none;
