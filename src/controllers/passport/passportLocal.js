@@ -43,8 +43,8 @@ passport.serializeUser((user, done) => {
     return done(null, user.id);
 });
 
-passport.deserializeUser((id, done) => {
-  loginService.findUserById(id).then(user => {
+passport.deserializeUser(async (id, done) => {
+  await loginService.findUserById(id).then(user => {
     return done(null, user);
   }).catch(error => {
     console.log(error);
