@@ -21,14 +21,15 @@ initPassportLocal();
     router.get("/register", homepageController.getRegisterPage);
     router.post("/register", auth.validateRegister ,homepageController.handleRegister);
     router.post("/login", passport.authenticate("local", {
-      successRedirect: "/",
+      successRedirect: "/users",
       failureRedirect: "/login",
       successFlash: true,
       failureFlash: true
     }));
-    router.get("/new-user", homepageController.getNewUserPage);    
+    router.get("/new-user", homepageController.getNewUserPage);   
+    router.get("/users", authController.checkLoggedIn, homepageController.getAdminPage); 
     router.post("/create-new-user", homepageController.createNewUser);
-    router.post("/log-out", authController.postLogOut);
+    router.get("/log-out", authController.postLogOut);
     return app.use("/", router);
   };
 

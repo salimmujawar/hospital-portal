@@ -35,6 +35,10 @@ let getRegisterPage = (req, res) => {
   });
 };
 
+let getAdminPage = (req, res) => {
+  return res.render("users/main.ejs");
+};
+
 let handleRegister = async(req, res) => {
   //Keep the old input value
   let form = {
@@ -90,5 +94,6 @@ module.exports = {
   createNewUser: createNewUser,
   getRegisterPage: getRegisterPage,
   getLoginPage: getLoginPage,
-  handleRegister: handleRegister  
+  handleRegister: handleRegister,
+  getAdminPage: getAdminPage
 };

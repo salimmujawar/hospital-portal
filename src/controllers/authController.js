@@ -7,7 +7,7 @@ let checkLoggedIn = (req, res, next) => {
 
 let checkLoggedOut = (req, res, next) => {
   if(req.isAuthenticated()) {
-    return res.redirect("/login");
+    return res.redirect("/users");
   }
   next();
 };
